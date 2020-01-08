@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generate Cv</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class=" container " style="background:antiquewhite; margin-top:3rem;">
+   <div class="alert alert-success alert-dismissible" id="success" style="display:none;">
+	  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+	  <h5 id="successtxt"></h5>
+	</div>
+  <div class="alert alert-danger alert-dismissible mb-10" id="error" style="display:none;">
+	  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+	</div>
+    <h4 style="padding:2rem 0rem 0rem 1rem;">Enter the employee records</h4>
+    
+     
+     <fieldset>  
+      <legend>Personal Details</legend> 
+      <div class="form-row">
+
+    <div class="form-group col-md-6">
+      <label for="">Date Of Birth</label>
+      <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+    </div>
+<div class="form-group col-md-6">
+      <label for="">Religion</label>
+      <input type="text" class="form-control" id="religion" name="religion" placeholder="religion">
+    </div> 
+
+  </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="">First Name</label>
+      <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="">Last Name</label>
+      <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="">Gender</label>
+   <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+  <label class="form-check-label" for="male">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="female" value="Female" checked>
+  <label class="form-check-label" for="female">Female</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+  <label class="form-check-label" for="other">Other</label>
+</div>
+</div>
+ 
+  <div class="form-group col-md-6">
+    <label for="">Marital Status</label>
+   <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="maritalstatus" id="married" value="married">
+  <label class="form-check-label" for="married">Married</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="maritalstatus" id="unmarried" value="unmarried" checked>
+  <label class="form-check-label" for="unmarried">Unmarried</label>
+</div>
+ 
+</div>
+</div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="">Father Name</label>
+      <input type="text" class="form-control" id="fathername" name="fathername" placeholder="Father Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="">Nationality</label>
+      <input type="text" class="form-control" id="country" name="lastname" placeholder=" " value="Nepali">
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for=" ">Mobile no</label>
+      <input type="number" class="form-control" id="mob1" name="mob1" placeholder="Mobile">
+    </div>
+     <div class="form-group col-md-6">
+      <label for="inputEmail4">Mobile 2</label>
+      <input type="number" class="form-control" id="mob2" name="mob2" placeholder="Mobile2">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Email">
+    </div>
+     <div class="form-group col-md-6">
+      <label for="email2">Email 2</label>
+      <input type="email" class="form-control" id="email2" placeholder="Email 2">
+    </div>
+  </div>
+ 
+  <div class="form-group">
+    <label for="inputAddress">Permanent Address</label>
+    <input type="text" class="form-control" id="peraddr" placeholder="Janapath Tole, Brt-14">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Temporary Address</label>
+    <input type="text" class="form-control" id="tmpaddr" placeholder="Bargachi Brt">
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+    <div id="skills">
+      <label for="">Skills</label>
+      <input type="text" class="form-control skills" id="skill" name="skills" placeholder="Skills">
+    </div>
+      <div class="form-group col-md-2 mt-1">
+      <button class="btn btn-default" id="edubtn" onclick="addskills()">+</button>
+    </div>
+    </div>
+     <div class="form-group col-md-6">
+     <div id="experience">
+      <label for="">Experience</label>
+      <input type="text" class="form-control experience" id="" name="experience" placeholder="experiences">
+      </div>
+      <div class="form-group col-md-2 mt-1">
+      <button class="btn btn-default" id="edubtn" onclick="addexperience()">+</button>
+    </div>
+    </div>
+   </div>
+  
+  <div >
+    <fieldset>
+      <legend>Education</legend>
+      <div class="form-row" id="education">
+      <div class="form-group col-md-3">
+      <label for="">Level</label>
+      <input type="text" class="form-control level"  name="level" placeholder="level">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="">School/College</label>
+      <input type="text" class="form-control school"  name="school" placeholder="school">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="">Passed Year</label>
+      <input type="text" class="form-control passed_year"  name="passed_year" placeholder="passed year">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="">Division</label>
+      <input type="text" class="form-control division"  name="division" placeholder="division">
+    </div>
+  </div>
+    <div class="form-group col-md-2">
+      <button class="btn btn-default" id="edubtn" onclick="addeducation()">+</button>
+    </div>
+    </fieldset>
+
+  </div>
+   
+ <button onclick="generate()" class="btn btn-primary m-3" id="btngenerate">Click to generate</button>
+ <table id="mytable" border="1" class="d-none">
+ <thead>
+ <tr>
+ <th>Level</th>
+ <th>School/College</th>
+ <th>Passed year</th>
+ <th>Division</th>
+ </tr>
+ </thead>
+ <tbody id="mybody">
+ </tbody>
+ </table>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="jsdf/jspdf.min.js"></script>
+<script src="table1/jspdf.plugin.table.js"></script>
+<script src="table/jspdf.plugin.autotable.js"></script>
+ <script>
+ // Default export is a4 paper, portrait, using milimeters for units
+ function addeducation(){
+  var cur= $("#education").html();
+  //var new = "<div class='form-group col-md-3'><label for=''>Level</label><input type='text' class='form-control level'  name='level' placeholder='level'></div><div class='form-group col-md-3'><label for=''>School/College</label><input type='text' class='form-control school'  name='school' placeholder='school'></div><div class='form-group col-md-3'><label for=''>Passed Year</label><input type='text' class='form-control passed_year'  name='passed_year' placeholder='passed year'></div><div class='form-group col-md-3'><label for=''>Division</label><input type='text' class='form-control division'  name='division' placeholder='division'></div>";
+  //new = cur + new;
+  //alert(new);
+  $("#education").append("<div class='form-group col-md-3'><label for=''></label><input type='text' autofocus class='form-control level'  name='level' placeholder='level'></div><div class='form-group col-md-3'><label for=''></label><input type='text' class='form-control school'  name='school' placeholder='school'></div><div class='form-group col-md-3'><label for=''></label><input type='text' class='form-control passed_year'  name='passed_year' placeholder='passed year'></div><div class='form-group col-md-3'><label for=''></label><input type='text' class='form-control division'  name='division' placeholder='division'></div>");
+ }
+
+function addskills(){
+  $("#skills").append("<input type='text' class='form-control skills mt-1' id='skill' name='skills' placeholder='Skill'>");
+}
+function addexperience(){
+$("#experience").append("<input type='text' class='form-control experience mt-1' id='' name='experience' placeholder='experience'>");}
+
+function generate(){
+
+//$("#btngenerate").attr("disabled", "disabled");
+    //var regno=$('#regno').val();
+    var dob=$('#dob').val();
+    var fname = $('#fname').val();
+    var lname = $('#lname').val();
+      var gender = $("input[name='gender']:checked").val();
+      var marstatus = $("input[name='maritalstatus']:checked").val();
+    var fathername = $('#fathername').val();
+    var nationality = $('#country').val();
+    //alert(nationality);
+    var mob1 = $('#mob1').val();
+    var mob2 = $('#mob2').val();
+    var email = $('#email').val();
+    var email2 = $('#email2').val();
+    var religion = $('#religion').val();
+    //var altct = $('#altctno').val();
+    var peraddr = $('#peraddr').val();
+    var tmpaddr = $('#tmpaddr').val();
+    //var skills = $('#skills').val();
+    //var hobby = $('#hobby').val();
+    var qual = $('#qualification').val();
+    //var training = $('#training').val();
+    //var exp = $('#experience').val();
+    var intfields = $('#interestedfields').val();
+    var levels=$('.level');
+    var schools=$('.school');
+    var years=$('.passed_year');
+    var divisions=$('.division');
+
+    var skills=$('.skills');
+    var experience=$('.experience');
+    //alert($(levels[0]).val());
+    //var minsal = $('#minsal').val();
+        //var entryby = $('#entryby').val();
+        
+  //var jobtype = $("input[name='jobtime']:checked").val();
+
+var doc = new jsPDF()
+
+doc.setFontSize(26)
+doc.setFontType("bold");
+doc.text(60, 20,'Curriculum Vitae')
+doc.setFontSize(16)
+doc.text(10,30,'Personal Information')
+doc.setFontType("normal");
+doc.line(10,31,68,31);
+doc.setFontSize(12)
+doc.text(10,40,'Name:')
+doc.text(60,40,fname+" "+lname)                 
+doc.text(10,45,"Father's Name:          ")
+doc.text(60,45,fathername)
+doc.text(10,50,"Date of Birth:          ")
+doc.text(60,50,dob)
+doc.text(10,55,"Permanent Address:      ")
+doc.text(60,55,peraddr)
+doc.text(10,60,"Temporary Address:      ")
+doc.text(60,60,tmpaddr)
+doc.text(10,65,"Gender:                 ")
+doc.text(60,65,gender)
+doc.text(10,70,"Marital Status:         ")
+doc.text(60,70,marstatus)
+doc.text(10,75,"Nationality:            ")
+doc.text(60,75,nationality)
+doc.text(10,80,"Religion:            ")
+doc.text(60,80,religion)
+doc.text(10,85,"Contact No:            ")
+if(mob2!="")
+doc.text(60,85,mob1+", "+mob2)
+else
+doc.text(60,85,mob1)
+
+doc.text(10,90,"Email:            ")
+if(mob2!="")
+doc.text(60,90,email+", "+email2)
+else
+doc.text(60,90,email)
+doc.setFontType("bold");
+doc.setFontSize(16)
+var startedu=100;
+doc.text(10,startedu,'Education')
+doc.setFontType("normal");
+doc.line(10,startedu+1,38,startedu+1);
+
+ var data=[], col, j=0;
+for(var i=0;i<levels.length;i++){
+  data[i]=[ [$(levels[i]).val()], [$(schools[i]).val()], [$(years[i]).val()],[$(divisions[i]).val()]];
+  if($(levels[i]).val()=="") break;
+ col="<tr><td>"+$(levels[i]).val()+"</td><td>"+$(schools[i]).val()+"</td><td>"+$(years[i]).val()+"</td><td>"+$(divisions[i]).val()+"</td>";
+  $("#mybody").append(col);
+  j++;
+  // data.push([$(schools[i]).val()]);
+	// data.push([$(years[i]).val()]);
+	// data.push([$(divisions[i]).val()
+  //]);
+  //  tbldata.push([$(levels[i]).val()]);
+  //  tbldata.push($(schools[i]).val())
+  //  tbldata.push($(years[i]).val())
+  //  tbldata.push($(divisions[i]).val());
+ }
+ //alert(tbldata);
+ doc.setFontSize(12)
+ //height = doc.drawTable(data, {xstart:10,ystart:10,tablestart:104});
+ doc.autoTable({
+   headStyles: {fillColor: [2, 0, 0]},
+   //theme: grid,
+   startY:109,
+   html: '#mytable'});
+//  doc.autoTable({
+//         startY: 104,
+//          head: [['Level ', 'School/College', 'Passed year','division']],
+//         body: [
+//          data
+//         ]
+//      });
+
+doc.setFontSize(16);
+doc.setFontType("bold");
+doc.text(10,130+(7*j),'Skills/Training');
+doc.setFontType("normal");
+// doc.setLineWidth(2.0);
+doc.setDrawColor(0, 0, 0);
+doc.line(10,131+(7*j),47,131+(7*j));
+
+var k=0;
+for(var i=0;i<skills.length;i++){
+  if($(skills[i]).val()=="") break;
+  doc.setFontSize(16);
+  doc.text(10,136+((7*j)+(5*k)),'\u2022');
+  doc.setFontSize(12);
+  doc.setFontType("normal");
+  doc.text(14,136+(7*j)+(5*k),$(skills[i]).val());
+  k++;
+}
+
+doc.setFontSize(16);
+doc.setFontType("bold");
+doc.text(10,146+(7*j)+(5*k),'Experience');
+doc.setFontType("normal");
+doc.setDrawColor(0, 0, 0);
+doc.line(10,147+(7*j)+(5*k),42,147+(7*j)+(5*k));
+var l=0;
+var ext=152;
+for(var i=0;i<experience.length;i++){
+  if($(experience[i]).val()=="") break;
+  doc.setFontSize(16);
+  doc.text(10,ext+((7*j)+(5*(k+l))),'\u2022');
+  doc.setFontSize(12);
+  doc.setFontType("normal");
+  doc.text(14,ext+(7*j)+(5*(k+l)),$(experience[i]).val());
+  l++;
+}
+doc.save(fname+"-"+lname+'.pdf')
+ }
+ </script>
+</body>
+</html>
